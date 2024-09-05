@@ -23,6 +23,58 @@ Make sure you have the following installed:
 
 ### 1. Clone the Repository
 
+```console
+~$ git clone https://github.com/lazlosteele/p-hw-2.1_LazloSteele.git
+~$ cd P-HW-#2.1_Lazlo-Steele
+```
+
+### 2. Build the Docker Image
+
+```console
+~$ docker build -t lazzyjeff/p-hw-2.1_lazlo-steele .
+```
+
+### 3. Run the Application
+
+```console
+~$ docker run -d -p 8000 lazzyjeff/p-hw-2.1_lazlo-steele
+```
+
+## Docker Compose (Optional)
+If you are using Docker Compose, you can start the app using the docker-compose.yml file.
+
+### 1. Start the Application
+
+```console
+~$ docker-compose up -d
+```
+
+### 2. Stop the Application
+
+```console
+~$ docker-compose down
+```
+
+## Project Structure
+
 ```bash
-git clone https://github.com/your-username/simple-uvicorn-webapp.git
-cd simple-uvicorn-webapp
+.
+├── .idea                # Directory of IDE specific items, ignore
+│   └── STUFF
+├── app
+│   ├── API
+│   │   ├──
+│   ├── __init__.py      # Makes the directory a python package
+│   ├── main.py          # Main entry point for the FastAPI app
+├── venv                 # Python virtual environment, ignore 
+│   └── STUFF                
+├── .dockerignore        # Excludes files from Docker build
+├── .gitignore           # Excludes files from Git Repository
+├── compose.yml          # Docker Compose configuration (optional)
+├── Dockerfile           # Dockerfile to build the image
+├── LICENSE.md           # Project open source license
+├── requirements.txt     # Python dependencies
+├── README.Docker.md     # Docker documentation
+└── README.md            # Project documentation
+
+```
