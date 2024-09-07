@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" class="sl-theme-dark">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace.js" ></script>
+</head>
+
+<body>
+    <div id="menu_header" class="header">
+        <sl-drawer label="Choose your number system" placement="top" class="drawer-placement-top">
+            <form>
+                <sl-select>
+                    <sl-option value="binary">BINARY</sl-option>
+                    <sl-option value="decimal">DECIMAL</sl-option>
+                    <sl-option value="hexadecimal">HEXADECIMAL</sl-option>
+                </sl-select>
+
+                <sl-input placeholder="Enter your value" clearable></sl-input>
+                <sl-button variant="primary">CALCULATE!</sl-button>
+            </form>
+
+            <sl-button slot="footer" variant="primary">CLOSE</sl-button>
+
+        </sl-drawer>
+
+        <sl-button>New Conversion</sl-button>
+
+        <script>
+            const drawer = document.querySelector('.drawer-placement-top');
+            const openButton = drawer.nextElementSibling;
+            const closeButton = drawer.querySelector('sl-button[variant="primary"]');
+
+            openButton.addEventListener('click', () => drawer.show());
+            closeButton.addEventListener('click', () => drawer.hide());
+        </script>
+    </div>
+    <div class="container" id="hero-number-container">
+        <H4 class="hero-number-label">Binary</H4>
+        <H2 class="hero-number-value">00111000</H2>
+
+        <H3 class="hero-number-label">Decimal</H3>
+        <H1 class="hero-number-value">100000</H1>
+
+        <H4 class="hero-number-label">Hexadecimal</H4>
+        <H2 class="hero-number-value">18A93C</H2>
+    </div>
+</body>
+</html>

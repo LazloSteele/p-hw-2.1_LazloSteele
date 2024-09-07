@@ -3,7 +3,7 @@
 This project is a minimal web application intended to fulfill a class assignment for PPCC CSC2025-2H1. This assignment
 is to create a program in any high level language to convert integers of the decimal, hexadecimal, or binary variety to 
 any of the other types mentioned. The app is containerized using Docker for portability, is built with Python 3.11, and 
-runs on a Uvicorn ASGI server, and uses FastAPI for its API.
+runs on an Uvicorn ASGI server, and uses FastAPI for its API.
 
 ## Features
 
@@ -37,7 +37,7 @@ Make sure you have the following installed:
 ### 3. Run the Application
 
 ```console
-~$ docker run -d -p 8000 lazzyjeff/p-hw-2.1_lazlo-steele
+~$ docker run -d -p 8000:8000 lazzyjeff/p-hw-2.1_lazlo-steele
 ```
 
 ## Docker Compose (Optional)
@@ -62,8 +62,11 @@ If you are using Docker Compose, you can start the app using the docker-compose.
 ├── .idea                # Directory of IDE specific items, ignore
 │   └── STUFF
 ├── app
-│   ├── API
-│   │   ├──
+│   ├── api
+│   │   ├── 
+│   ├── static
+│   │   ├── index.html   # the webpage that is served by the app
+│   │   ├── styles.css   # our style sheet
 │   ├── __init__.py      # Makes the directory a python package
 │   ├── main.py          # Main entry point for the FastAPI app
 ├── venv                 # Python virtual environment, ignore 
