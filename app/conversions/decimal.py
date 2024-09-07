@@ -1,5 +1,5 @@
 # import the parent class to inherit
-from conversion import Conversion
+from .conversion import Conversion
 
 
 class Decimal(Conversion):

@@ -1,4 +1,4 @@
-from conversion import Conversion
+from .conversion import Conversion
 
 
 class Hexadecimal(Conversion):
